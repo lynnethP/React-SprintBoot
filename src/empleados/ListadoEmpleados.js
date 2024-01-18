@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { NumericFormat } from 'react-number-format';
+import AgregarEmpleado from './AgregarEmpleado';
 
 export default function ListadoEmpleados() {
 
@@ -23,8 +24,15 @@ export default function ListadoEmpleados() {
         <div className='container'>
             <div className="container text-center" style={{ margin: "30px" }}>
                 <h2>Human Resources System</h2>
+                <br />
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" title='Add Employee' style={{ borderRadius: "100%"}}>
+                    <span><i class="fa-solid fa-user-plus"></i></span>
+                </button>
             </div>
+                    <i class="fa-solid fa-user-pen"></i>
+                    <i class="fa-solid fa-user-xmark"></i>
 
+                    <AgregarEmpleado />
             <table className="table table-striped table-hover align-middle">
                 <thead className='table-dark'>
                     <tr>
